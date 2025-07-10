@@ -89,3 +89,6 @@ h1 {
 .tie {
     color: #2196F3;
 }
+footer {
+    justify-content: bottom; 
+} 
