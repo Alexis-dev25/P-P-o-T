@@ -1,101 +1,205 @@
 
+
 * {
+
     margin: 0;
+
     padding: 0;
+
     box-sizing: border-box;
+
 }
+
+
 
 body {
+
     font-family: 'Arial', sans-serif;
+
     background: linear-gradient(135deg, #721e1e, #b61212);
+
     min-height: 100vh;
+
     display: flex;
-    align-items: center;
+
     justify-content: center;
+
+    align-items: center;
+
 }
+
+
 
 .container {
+
     background: rgba(255, 255, 255, 0.9);
+
     padding: 2rem;
+
     border-radius: 15px;
+
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-    align-items: center;
-    justify-content: center;
+
+    text-align: center;
+
 }
+
+
 
 h1 {
+
     color: #982a2a;
+
     margin-bottom: 2rem;
+
 }
+
+
 
 .choices {
+
     display: flex;
+
+    justify-content: center;
+
     gap: 1rem;
+
     margin-bottom: 2rem;
+
 }
+
+
 
 .choice {
+
     font-size: 2.5rem;
+
     padding: 1rem;
+
     border: none;
+
     background: white;
+
     border-radius: 50%;
+
     cursor: pointer;
+
     transition: transform 0.2s;
+
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
 }
+
+
 
 .choice:hover {
+
     transform: scale(1.1);
+
 }
+
+
 
 .players {
+
     display: flex;
-    gap: 2rem;
-    margin-bottom: 1.5rem;
-    align-items: center;
+
     justify-content: center;
+
+    align-items: center;
+
+    gap: 2rem;
+
+    margin-bottom: 1.5rem;
+
 }
+
+
+
+.player {
+
+    text-align: center;
+
+}
+
+
 
 .player-choice {
+
     font-size: 3rem;
+
     margin: 1rem 0;
+
     min-width: 80px;
+
     min-height: 80px;
+
     display: flex;
-    align-items: center;
+
     justify-content: center;
+
+    align-items: center;
+
 }
+
+
 
 .vs {
+
     font-size: 1.5rem;
+
     font-weight: bold;
+
     color: #982a2a;
+
 }
+
+
 
 .result {
+
     font-size: 1.5rem;
+
     font-weight: bold;
+
     margin-top: 1rem;
+
     min-height: 2rem;
-    align-items: center;
-    justify-content: center;
+
 }
+
+
 
 @keyframes bounce {
+
     0%, 100% { transform: scale(1); }
+
     50% { transform: scale(1.2); }
+
 }
+
+
 
 .winner {
+
     animation: bounce 0.5s ease-in-out;
+
     color: #4CAF50;
+
 }
+
+
 
 .loser {
+
     color: #f44336;
+
 }
 
+
+
 .tie {
+
     color: #2196F3;
+
 }
