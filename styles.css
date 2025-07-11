@@ -9,9 +9,6 @@
     box-sizing: border-box;
 
 }
-
-
-
 body {
 
     font-family: 'Arial', sans-serif;
@@ -27,9 +24,6 @@ body {
     align-items: center;
 
 }
-
-
-
 .container {
 
     background: rgba(255, 255, 255, 0.9);
@@ -43,9 +37,6 @@ body {
     text-align: center;
 
 }
-
-
-
 h1 {
 
     color: #982a2a;
@@ -53,9 +44,6 @@ h1 {
     margin-bottom: 2rem;
 
 }
-
-
-
 .choices {
 
     display: flex;
@@ -67,8 +55,6 @@ h1 {
     margin-bottom: 2rem;
 
 }
-
-
 
 .choice {
 
@@ -90,15 +76,11 @@ h1 {
 
 }
 
-
-
 .choice:hover {
 
     transform: scale(1.1);
 
 }
-
-
 
 .players {
 
@@ -114,16 +96,11 @@ h1 {
 
 }
 
-
-
 .player {
 
     text-align: center;
 
 }
-
-
-
 .player-choice {
 
     font-size: 3rem;
@@ -141,9 +118,6 @@ h1 {
     align-items: center;
 
 }
-
-
-
 .vs {
 
     font-size: 1.5rem;
@@ -153,8 +127,6 @@ h1 {
     color: #982a2a;
 
 }
-
-
 
 .result {
 
@@ -167,9 +139,6 @@ h1 {
     min-height: 2rem;
 
 }
-
-
-
 @keyframes bounce {
 
     0%, 100% { transform: scale(1); }
@@ -177,8 +146,6 @@ h1 {
     50% { transform: scale(1.2); }
 
 }
-
-
 
 .winner {
 
@@ -188,18 +155,18 @@ h1 {
 
 }
 
-
-
 .loser {
 
     color: #f44336;
 
 }
 
-
-
 .tie {
 
     color: #2196F3;
 
+}
+.despedida {
+    margin-top: 20px;
+    color: white;
 }
