@@ -22,6 +22,32 @@ function determinarGanador(userChoice, cpuChoice) {
     return "user";
 }
 
+// Agregar al inicio del archivo
+const themeToggle = document.createElement('button');
+themeToggle.textContent = '🌙';
+themeToggle.className = 'theme-toggle';
+themeToggle.style.position = 'absolute';
+themeToggle.style.top = '20px';
+themeToggle.style.right = '20px';
+themeToggle.style.fontSize = '1.5rem';
+themeToggle.style.background = 'transparent';
+themeToggle.style.border = 'none';
+themeToggle.style.cursor = 'pointer';
+document.body.appendChild(themeToggle);
+
+// Verificar preferencia del sistema
+if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    document.body.classList.add('dark-mode');
+    themeToggle.textContent = '☀️';
+}
+
+// Toggle manual
+themeToggle.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+    themeToggle.textContent = document.body.classList.contains('dark-mode') ? '☀️' : '🌙';
+});
+
+// Modificar la función actualizarInterfaz
 function actualizarInterfaz(userChoice, cpuChoice, resultado) {
     const playerChoiceElement = document.getElementById('player-choice');
     const cpuChoiceElement = document.getElementById('cpu-choice');
@@ -30,9 +56,17 @@ function actualizarInterfaz(userChoice, cpuChoice, resultado) {
     playerChoiceElement.textContent = symbolMap[userChoice];
     cpuChoiceElement.textContent = symbolMap[cpuChoice];
 
-    // Remover clases anteriores
-    playerChoiceElement.classList.remove('winner', 'loser', 'tie');
-    cpuChoiceElement.classList.remove('winner', 'loser', 'tie');
+  // Reset clases
+    playerChoiceElement.className = 'player-choice';
+    cpuChoiceElement.className = 'player-choice';
+
+  // Agregar animación de shake
+    playerChoiceElement.classList.add('shake');
+    cpuChoiceElement.classList.add('shake');
+    
+    setTimeout(() => {
+    playerChoiceElement.classList.remove('shake');
+    cpuChoiceElement.classList.remove('shake');
     
     if (resultado === "tie") {
         resultElement.textContent = "¡Empate!";
@@ -47,6 +81,7 @@ function actualizarInterfaz(userChoice, cpuChoice, resultado) {
         playerChoiceElement.classList.add('loser');
         cpuChoiceElement.classList.add('winner');
     }
+    }, 500);
 }
 
 document.querySelectorAll('.choice').forEach(button => {
